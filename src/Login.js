@@ -41,8 +41,6 @@ function Login() {
 
 
         return () => {
-            // document.body.removeChild(script1);
-            // document.body.removeChild(script3);
 
         }
     }, []);
