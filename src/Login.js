@@ -25,7 +25,7 @@ function Login() {
         `;
         const script2 = document.createElement('script');
         script2.innerHTML = `
-        ownid('init', {serverUrl: 'https://0exby31e3svoq7.server.ownid.com/ownid'});
+        ownid('init', {serverUrl: 'https://ubnnvyesyyhfcz.server.ownid.com/ownid'});
         `;
         const script3 = document.createElement('script');
         script3.innerHTML = `
