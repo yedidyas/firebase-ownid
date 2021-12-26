@@ -16,14 +16,19 @@ function Login() {
         if (user) navigate('/dashboard', { replace: true })
     }, [user, loading]);
     useEffect(() => {
-        const script = document.createElement('script');
-        script.innerHTML = `
+        const script1 = document.createElement('script');
+        script1.innerHTML = `
          (function (w, d, s, u, o, e, p, a) {w[o] = w[o] || function () {
         a=arguments,(w[o].q = w[o].q || []).push(a);'function'==typeof a[a.length - 1]&&a[a.length - 1](Promise.resolve())},
         e = d.createElement(s), p = d.getElementsByTagName(s)[0];e.src = u;e.async = 1;p.parentNode.insertBefore(e, p)
         })(window, document, 'script', 'https://cdn.ownid.com/js/firebase-sdk.es5.js', 'ownid');
+        `;
+        const script2 = document.createElement('script');
+        script2.innerHTML = `
         ownid('init', {serverUrl: 'https://0exby31e3svoq7.server.ownid.com/ownid'});
-        
+        `;
+        const script3 = document.createElement('script');
+        script3.innerHTML = `
           ownid('login', {
       loginIdField: document.getElementById('email'),
       passwordField: document.getElementById('password'),
@@ -31,12 +36,17 @@ function Login() {
       onSuccess: () => {
         alert('OwnID login!');
       },
-    });
-        `
-        document.body.appendChild(script);
+    });        `;
+        document.body.appendChild(script1);
+        document.body.appendChild(script2);
+        document.body.appendChild(script3);
+
 
         return () => {
-            document.body.removeChild(script);
+            document.body.removeChild(script1);
+            document.body.removeChild(script2);
+            document.body.removeChild(script3);
+
         }
     }, []);
     return (
