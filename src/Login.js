@@ -22,11 +22,10 @@ function Login() {
         a=arguments,(w[o].q = w[o].q || []).push(a);'function'==typeof a[a.length - 1]&&a[a.length - 1](Promise.resolve())},
         e = d.createElement(s), p = d.getElementsByTagName(s)[0];e.src = u;e.async = 1;p.parentNode.insertBefore(e, p)
         })(window, document, 'script', 'https://cdn.ownid.com/js/firebase-sdk.es5.js', 'ownid');
-        `;
-        const script2 = document.createElement('script');
-        script2.innerHTML = `
         ownid('init', {serverUrl: 'https://ubnnvyesyyhfcz.server.ownid.com/ownid'});
+
         `;
+
         const script3 = document.createElement('script');
         script3.innerHTML = `
           ownid('login', {
@@ -38,18 +37,17 @@ function Login() {
       },
     });        `;
         document.body.appendChild(script1);
-        document.body.appendChild(script2);
         document.body.appendChild(script3);
 
 
         return () => {
-            document.body.removeChild(script1);
-            document.body.removeChild(script2);
-            document.body.removeChild(script3);
+            // document.body.removeChild(script1);
+            // document.body.removeChild(script3);
 
         }
     }, []);
     return (
+        <form>
         <div className="login">
             <div className="login__container">
                 <input
@@ -86,6 +84,7 @@ function Login() {
                 </div>
             </div>
         </div>
+        </form>
     );
 }
 export default Login;
