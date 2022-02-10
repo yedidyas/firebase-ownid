@@ -22,7 +22,7 @@ function Login() {
         a=arguments,(w[o].q = w[o].q || []).push(a);'function'==typeof a[a.length - 1]&&a[a.length - 1](Promise.resolve())},
         e = d.createElement(s), p = d.getElementsByTagName(s)[0];e.src = u;e.async = 1;p.parentNode.insertBefore(e, p)
         })(window, document, 'script', 'https://cdn.ownid.com/js/firebase-sdk.es5.js', 'ownid');
-        ownid('init', {serverUrl: 'https://ubnnvyesyyhfcz.server.ownid.com/ownid'});
+        ownid('init', {serverUrl: 'https://vyh8i32u1u5cjj.server.dev.ownid.com/ownid'});
 
         `;
 
